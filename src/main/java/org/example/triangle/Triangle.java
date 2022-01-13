@@ -7,6 +7,7 @@ public class Triangle {
     double[] sides;
 
     public Triangle(double a, double b, double c) {
+
         sides = new double[]{a, b, c};
     }
 
@@ -25,8 +26,8 @@ public class Triangle {
     public Triangle(Point[] s) {
         sides = new double[s.length];
         sides[0] = Math.sqrt(Math.pow((double) (s[1].x - s[0].x), 2.0) + Math.pow((double) (s[1].y - s[0].y), 2.0));
-        sides[1] = Math.sqrt(Math.pow((double) (s[1].x - s[2].x), 2.0) + Math.pow((double) (s[1].x - s[2].x), 2.0));
-        sides[2] = Math.sqrt(Math.pow((double) (s[2].x - s[0].x), 2.0) + Math.pow((double) (s[2].x - s[0].x), 2.0));
+        sides[1] = Math.sqrt(Math.pow((double) (s[1].x - s[2].x), 2.0) + Math.pow((double) (s[1].y - s[2].y), 2.0));
+        sides[2] = Math.sqrt(Math.pow((double) (s[2].x - s[0].x), 2.0) + Math.pow((double) (s[2].y - s[0].y), 2.0));
     }
 
     private int uniqueSides() {
@@ -35,7 +36,7 @@ public class Triangle {
 
     //Scalene triangles are triangles where each side is a different length.
     public boolean isScalene() {
-        if (uniqueSides() == 1) {
+        if (uniqueSides() == 3) {
             return true;
         }
         return false;
@@ -49,7 +50,7 @@ public class Triangle {
      * @return true or false
      */
     public boolean isEquilateral() {
-        if (uniqueSides() == 3) {
+        if (uniqueSides() == 1) {
             return true;
         }
         return false;
