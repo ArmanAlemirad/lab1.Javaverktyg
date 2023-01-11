@@ -59,3 +59,10 @@
 
 15	notepad .\fix2.txt
 	lägger in text
+
+16	skapar git repository på github.se
+
+	i konsolen skriver jag:
+	git remote add origin https://github.com/Ye4y/lab1.Javaverktyg.git
+	git remote för att kontroller origin.
+	git push -u origin main
