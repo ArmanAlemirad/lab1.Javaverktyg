@@ -1,0 +1,95 @@
+1
+ 	mkdir Lab1
+	git init
+	New-Item README.md
+
+2	git add .\README.md
+	notepad .\README.md
+
+3	git commit -m "Initial commit"
+
+4	git switch -c feature1
+
+5	git commit -m "Add dog and replaced moose with mouse"
+
+6	 git switch main, notepad .\README.md, git add .\README.md, git commit -m "Change moose to mahmut"
+
+7	 git merge feature1, fick felmeddelande att det inte gick. 
+	öppnade notepad README.md med text:
+
+		duck
+	<<<<<<< HEAD
+	mahmut
+	cat
+	=======
+	mouse
+	cat
+	dog
+	>>>>>>> feature1
+
+	korrigerade till rätt djur i. 
+
+8 	git branch extinct
+
+9	git revert fd30e4a
+
+10	git switch -c feature2
+	git checkout main
+
+11	notepad README.md (byter alla till stor bokstav)
+	git add .\READMe.md
+	git commit -m "Upercase fix"
+
+12 	checkout feature2 
+	New-item fix1.txt
+	git add fix1.txt
+	git commit -m "Add fix1.txt"
+
+	ew-item fix2.txt
+	git add fix2.txt
+	git commit -m "Add fix2.txt"
+
+13	git checkout main
+	ls
+
+14	git graph för att se vad fix2 heter
+	git checkout main
+	git cherry-pick 4be164b
+	
+
+15	notepad .\fix2.txt
+	lägger in text
+
+16	skapar git repository på github.se
+
+	i konsolen skriver jag:
+	git remote add origin https://github.com/Ye4y/lab1.Javaverktyg.git
+	git remote för att kontroller origin.
+	git push -u origin main
+
+
+17 	skapar gitignore file.
+	lägger in
+	*.jar
+	target/**
+	!target/*.html
+ 	out/
+	.idea/
+
+18 	git tag -a v1.0	message "Version 1.0"
+
+19	git rebase -i HEAD~4
+	pick 55b43ed Add all git code
+	s efeb76f Update git code with new codes
+	s 5486b55 Add gitignore file
+	s 6e27d7f Add codecomands in fix2 file
+	esc, shift  +z, z (Sparar ändringar)
+
+	ändrade commit meddelande
+
+20 	git switch -c feature3
+	notepad fix2
+	git add fix2
+	checkout main
+	merge feature3
+	commit -m "Add code commands for 18 19 20"
