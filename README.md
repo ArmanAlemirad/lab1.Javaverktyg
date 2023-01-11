@@ -1,5 +1,4 @@
-
-mahmut
-cat
-dog
+Mahmut
+Cat
+Dog
 
