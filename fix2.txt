@@ -76,3 +76,20 @@
  	out/
 	.idea/
 
+18 	git tag -a v1.0	message "Version 1.0"
+
+19	git rebase -i HEAD~4
+	pick 55b43ed Add all git code
+	s efeb76f Update git code with new codes
+	s 5486b55 Add gitignore file
+	s 6e27d7f Add codecomands in fix2 file
+	esc, shift  +z, z (Sparar ändringar)
+
+	ändrade commit meddelande
+
+20 	git switch -c feature3
+	notepad fix2
+	git add fix2
+	checkout main
+	merge feature3
+	commit -m "Add code commands for 18 19 20"
