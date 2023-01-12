@@ -66,3 +66,13 @@
 	git remote add origin https://github.com/Ye4y/lab1.Javaverktyg.git
 	git remote för att kontroller origin.
 	git push -u origin main
+
+
+17 	skapar gitignore file.
+	lägger in
+	*.jar
+	target/**
+	!target/*.html
+ 	out/
+	.idea/
+
