@@ -1,4 +1,31 @@
+package org.example.roman;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 class RomanNumeralTest {
-  
+    RomanNumeral romanNumeral = new RomanNumeral();
+    @Test
+    void convertFromRomanToDecimal(){
+        var result = romanNumeral.convert("V");
+        assertEquals(5,result);
+    }
+
+    //Istället för att en ny metod. gå till junit5.org
+    // under writing test -> 2.16 Parameterized Tests
+    @DisplayName("Convert from Roman Numeral to Decimal number system")
+    @ParameterizedTest (name = "{index} ==> roman ''{0}'' is {1}")
+    @CsvSource({
+            "I,1",
+            "IV,4",
+            "V,5"
+    })
+    void convertFromRomanToDecimal(String romanNumber, int expected){
+        var result = romanNumeral.convert(romanNumber);
+        assertEquals(expected,result);
+    }
 }
