@@ -1,5 +1,5 @@
 *.jar
 target/**
-!target/*.html
+!target/**/*.html
  out/
 .idea/
